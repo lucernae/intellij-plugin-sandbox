@@ -5,6 +5,8 @@
     <vendor>lucernae</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.go</depends>
+    <depends>gherkin</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
@@ -13,12 +15,12 @@
         <postStartupActivity implementation="com.github.lucernae.intellijpluginsandbox.startup.MyProjectActivity" />
 
         <!-- Gherkin file type support -->
-        <fileType
-            name="Gherkin"
-            implementationClass="com.github.lucernae.intellijpluginsandbox.gherkin.GherkinFileType"
-            fieldName="INSTANCE"
-            language="Gherkin"
-            extensions="feature"/>
+<!--        <fileType-->
+<!--            name="Gherkin"-->
+<!--            implementationClass="com.github.lucernae.intellijpluginsandbox.gherkin.override.GherkinFileType"-->
+<!--            fieldName="INSTANCE"-->
+<!--            language="Gherkin"-->
+<!--            extensions="feature"/>-->
 
         <!-- Run line markers for Gherkin scenarios -->
         <runLineMarkerContributor language="Gherkin" implementationClass="com.github.lucernae.intellijpluginsandbox.gherkin.GherkinRunLineMarkerProvider"/>
